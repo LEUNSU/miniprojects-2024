@@ -95,3 +95,24 @@ IoT 개발자 미니프로젝트 리포지토리
     - GND - GND 8개중 아무데나 연결
     - VCC - 5V 연결
     - S - GPIO8 연결
+
+## 6, 7일차
+- 네트워크 대공사
+    [x] 개인공유기, PC, 라즈베리파이
+
+- 스마트홈 연동 클래스 미니프로젝트
+    - 온습도 센서, RGB LED
+    - PRi <--> Windows 통신(MQTT)
+    - WPF 모니터링 앱
+
+- IoT 기기간 통신방법
+    - Modbus - 시리얼통신으로 데이터 전송(완전 구식)
+    - OPC UA - Modbus통신 불편한 점 개선(아주 복잡)
+    - **MQTT** - 가장 편리! AWS IoT, Azure IoT 클라우드 산업계 표준으로 사용
+
+- MQTT 통신
+    [x] Mosquitto Broker 설치
+        - mosquitto.conf : listener 1883 0.0.0.0, allow_anonymous true
+        - 방화벽 인바운드 열기
+    [ ] RPi : paho-mqtt 패키지 설치, 송신(publisher)
+    - Win : MQTT.NET Nuget패키지 설치, 수신(subscriber)
